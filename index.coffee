@@ -6,8 +6,7 @@ require 'pong-q'
 
 pongular.module('pong-mark', ['pong-q'])
 
-.service 'postmark', ->
-  require 'Postmark'
+.service 'postmark', -> require 'postmark'
 
 .service 'configuredPostmark', (postmark, postmarkConfig)->
   postmark(postmarkConfig.apiKey)

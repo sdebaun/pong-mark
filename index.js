@@ -7,7 +7,7 @@
   require('pong-q');
 
   pongular.module('pong-mark', ['pong-q']).service('postmark', function() {
-    return require('Postmark');
+    return require('postmark');
   }).service('configuredPostmark', function(postmark, postmarkConfig) {
     return postmark(postmarkConfig.apiKey);
   }).service('$mailer', function($promise, configuredPostmark) {
